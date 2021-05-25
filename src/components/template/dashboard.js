@@ -53,7 +53,7 @@ const Dashboard = (props) => {
     const [totalPoints, setTotalPoints] = useState(0);
 
     useEffect(() => {
-        if (selectedMonth === 0) {
+        if (selectedMonth === "0") {
             setPurchases(getDataSet());
         }   else {
             setPurchases(filterPurchasesByMonth(getDataSet(), selectedMonth))
