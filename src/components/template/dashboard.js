@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = (props) => {
     const classes = useStyles(props);
     const [purchases, setPurchases] = useState(getDataSet());
-    const [selectedMonth, setSelectedMonth] = useState(0);
+    const [selectedMonth, setSelectedMonth] = useState("0");
     const [totalSpent, setTotalSpent] = useState(undefined);
     const [totalPoints, setTotalPoints] = useState(0);
 
