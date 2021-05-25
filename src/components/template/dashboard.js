@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getDataSet, calculateSpent, filterPurchasesByMonth, calculatePoints} from '../../sharedFunctions/dataFunctions/dataSetFunctions';
-import {Paper, Typography, Select, MenuItem, InputLabel, Grid} from '@material-ui/core';
+import {Paper, Typography, Select, MenuItem, Grid} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +53,7 @@ const Dashboard = (props) => {
     const [totalPoints, setTotalPoints] = useState(0);
 
     useEffect(() => {
-        if (selectedMonth == 0) {
+        if (selectedMonth === 0) {
             setPurchases(getDataSet());
         }   else {
             setPurchases(filterPurchasesByMonth(getDataSet(), selectedMonth))

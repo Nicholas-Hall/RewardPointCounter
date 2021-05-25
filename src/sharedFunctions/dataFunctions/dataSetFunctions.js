@@ -6,7 +6,7 @@ export const getDataSet = () => {
 }
 
 export const filterPurchasesByMonth = (arrayOfPurchases, filterMonth) => {
-    return arrayOfPurchases.filter(purchase => moment(purchase.date).format('M') == filterMonth);
+    return arrayOfPurchases.filter(purchase => moment(purchase.date).format('M') === filterMonth);
 }
 
 //calculateSpent takes in an array of purchases and returns a float 00.00
